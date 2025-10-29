@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin flexcenter(){
+ display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin button-style($bg-color){
+    padding: 10px 25px;
+    margin: 1vw;
+    background-color: $bg-color;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    text-transform: uppercase;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  @include flexcenter();
+  background-color: black;
+
+  section {
+    height: 50%;
+    width: 50%;
+    background-color: white;
+
+    h1 {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+         padding: 10px ;
+    }
+    #blue{
+        @include button-style(blue);
+    }
+    #red{
+        @include button-style(red);
+    }
+  }
+}
