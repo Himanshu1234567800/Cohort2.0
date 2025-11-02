@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*const product = {
+          name : 'socks',
+          price:  1091        
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.newProperty = true;
+        console.log(product.newProperty);*/
+
+      const product = {
+        name: `Himanshu`,
+        'delivery-time': '1 day',
+        ratings: {
+            stars: 4.5,
+            count: 87
+        },
+        fun: function function1() {
+            console.log('functions inside object');
+        }
+      };
+      // Three ways to access the value inside a Object//
+      console.log(product);
+      console.log(product.name);
+      console.log(product['name']);
+      console.log(product['delivery-time']);
+      console.log(product.ratings.stars);
+      product.fun();
+
+
+      /*JSON built-in-object*/
+      console.log(typeof JSON.stringify(product));
+
+      const jsonString =  JSON.stringify(product);
+      console.log(JSON.parse(jsonString));
+
+     // loclStorage Built-in-object
+     localStorage.setItem('name','dev');
+     console.log(localStorage.getItem('name'));
+
+     const object ={
+        message: 'hello'
+     };
+     const object1 = object;
+      object.message = 'good job';
+      console.log(object['message']);
+     
+      const {message} = object;
+
+    const  object3 = {
+        message
+    }
+    console.log(object3);
+    console.log('hello'.repeat(2));
+    </script>
+  </body>
+</html>
