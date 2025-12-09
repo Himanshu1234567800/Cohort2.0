@@ -1,0 +1,208 @@
+@font-face {
+  font-family: font;
+
+  src: url(./NeueMachina-Regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #efeae3;
+  font-family: font;
+}
+
+.main {
+  /* background-color: #000; */
+  position: relative;
+  z-index: 10;
+}
+
+#page1 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+  position: relative;
+  padding: 0 2vw;
+}
+
+nav {
+  padding: 2vw 0vw;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  justify-content: space-between;
+}
+
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+#nav-part2 h4 {
+  padding: 10px 20px;
+  border: 1px solid #0000003c;
+  border-radius: 50px;
+  font-weight: 500;
+  color: #000000bb;
+  transition: all ease 0.4s;
+  position: relative;
+  font-size: 18px;
+  overflow: hidden;
+}
+#nav-part2 h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+#nav-part2 h4 a {
+  color: #000000bb;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  z-index: 9;
+}
+
+#nav-part2 h4:hover a {
+  color: #fff;
+}
+#center {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 4vw;
+}
+#left h3 {
+  font-size: 1.8vw;
+  letter-spacing: 0px;
+  font-weight: 600;
+}
+#right h1 {
+  font-size: 9.5vw;
+  font-weight: 900;
+  text-align: right;
+  line-height: 0.9;
+}
+
+#page1 video {
+  position: relative;
+  margin-top: 4vw;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2vw;
+  
+}
+#hero-shape {
+  position: absolute;
+  height: 40vw;
+  width: 53vw;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background: #fd3c15;
+  right: 0%;
+  top: 80vh;
+  filter: blur(20px);
+}
+#hero-1{
+  position: absolute;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  background: #fd3c15;
+  filter: blur(20px);
+  top: 10vh;
+  animation-name: anime2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear; 
+}
+#hero-2{
+  position: absolute;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  background: #fd3c15;
+  filter: blur(20px);
+  top: 10vh;
+  animation-name: anime2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear; 
+}
+#hero-3 {
+  position: absolute;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  background: #fd3c15;
+  filter: blur(20px);
+  top: 10vh;
+  animation-name: anime1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear; 
+}
+@keyframes anime1 {
+  from {
+    transform: translate(40%, -10%);
+  }
+  to {
+    transform: translate(40%, -23%);
+  }
+}
+@keyframes anime2 {
+  from {
+    transform: translate(40%, -10%);
+  }
+  to {
+    transform: translate(-20%, 23%);
+  }
+}
+/* Initial hidden state for reveal elements */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Active class added when element is in view */
+.reveal.show {
+  opacity: 1;
+  transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateY(0px);
+}
+.scale-img {
+  opacity: 0;
+  transform: scale(1);
+  transition: all 1.2s ease-out;
+}
+
+.scale-img.scaled {
+  opacity: 1;
+  transform: scale(1.15);
+}
